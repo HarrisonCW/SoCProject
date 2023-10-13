@@ -1,0 +1,1518 @@
+
+*** Running vivado
+    with args -log mcs_top_vanilla.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source mcs_top_vanilla.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source mcs_top_vanilla.tcl -notrace
+Command: synth_design -top mcs_top_vanilla -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18260
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1553.211 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'mcs_top_vanilla' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/sys/top/mcs_top_vanilla.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'cpu' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/synth/cpu.v:60]
+INFO: [Synth 8-6157] synthesizing module 'bd_3914' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:10]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_dlmb_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_3/synth/bd_3914_dlmb_0.vhd:89]
+	Parameter C_LMB_NUM_SLAVES bound to: 2 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_v10' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:92' bound to instance 'U0' of component 'lmb_v10' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_3/synth/bd_3914_dlmb_0.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:141]
+INFO: [Synth 8-3491] module 'FDS' declared at 'C:/XilinxVitis/Vivado/2021.2/scripts/rt/data/unisim_comp.v:27960' bound to instance 'POR_FF_I' of component 'FDS' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:171]
+INFO: [Synth 8-6157] synthesizing module 'FDS' [C:/XilinxVitis/Vivado/2021.2/scripts/rt/data/unisim_comp.v:27960]
+INFO: [Synth 8-6155] done synthesizing module 'FDS' (1#1) [C:/XilinxVitis/Vivado/2021.2/scripts/rt/data/unisim_comp.v:27960]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10' (2#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_dlmb_0' (3#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_3/synth/bd_3914_dlmb_0.vhd:89]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'bd_3914_dlmb_0' is unconnected for instance 'dlmb' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:115]
+WARNING: [Synth 8-7023] instance 'dlmb' of module 'bd_3914_dlmb_0' has 25 connections declared, but only 24 given [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:115]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_dlmb_cntlr_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/synth/bd_3914_dlmb_cntlr_0.vhd:84]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000011111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3137' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/synth/bd_3914_dlmb_cntlr_0.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3262]
+	Parameter C_TARGET bound to: 2 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_mux' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2530' bound to instance 'lmb_mux_I' of component 'lmb_mux' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3514]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2617]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2113' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2684]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr_v4_0_20_pselect_mask' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2128]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr_v4_0_20_pselect_mask' (4#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2128]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (5#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2617]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (6#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3262]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_dlmb_cntlr_0' (7#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/synth/bd_3914_dlmb_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_ilmb_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/synth/bd_3914_ilmb_0.vhd:89]
+	Parameter C_LMB_NUM_SLAVES bound to: 1 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_v10' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:92' bound to instance 'U0' of component 'lmb_v10' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/synth/bd_3914_ilmb_0.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'lmb_v10__parameterized1' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:141]
+INFO: [Synth 8-3491] module 'FDS' declared at 'C:/XilinxVitis/Vivado/2021.2/scripts/rt/data/unisim_comp.v:27960' bound to instance 'POR_FF_I' of component 'FDS' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:171]
+INFO: [Synth 8-256] done synthesizing module 'lmb_v10__parameterized1' (7#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/hdl/lmb_v10_v3_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_ilmb_0' (8#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_2/synth/bd_3914_ilmb_0.vhd:89]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'bd_3914_ilmb_0' is unconnected for instance 'ilmb' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:163]
+WARNING: [Synth 8-7023] instance 'ilmb' of module 'bd_3914_ilmb_0' has 25 connections declared, but only 24 given [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:163]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_ilmb_cntlr_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_5/synth/bd_3914_ilmb_cntlr_0.vhd:84]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000011111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 0 - type: integer 
+	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
+	Parameter C_CE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_UE_FAILING_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
+	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 1 - type: integer 
+	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
+	Parameter C_WRITE_ACCESS bound to: 2 - type: integer 
+	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3137' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_5/synth/bd_3914_ilmb_cntlr_0.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr__parameterized1' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3262]
+	Parameter C_TARGET bound to: 2 - type: integer 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_MASK1 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK2 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_MASK3 bound to: 64'b0000000000000000000000000000000000000000100000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_ECC bound to: 0 - type: integer 
+	Parameter C_NUM_LMB bound to: 1 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'lmb_mux' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2530' bound to instance 'lmb_mux_I' of component 'lmb_mux' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3514]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux__parameterized1' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2617]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2113' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2684]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr_v4_0_20_pselect_mask__parameterized0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2128]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr_v4_0_20_pselect_mask__parameterized0' (8#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2128]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux__parameterized1' (8#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:2617]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr__parameterized1' (8#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_4/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3262]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_ilmb_cntlr_0' (9#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_5/synth/bd_3914_ilmb_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_iomodule_0_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/synth/bd_3914_iomodule_0_0.vhd:85]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_INSTANCE bound to: iomodule - type: string 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000010000000000000001111111111111111 
+	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_IO_HIGHADDR bound to: 64'b0000000000000000000000000000000011111111111111111111111111111111 
+	Parameter C_IO_BASEADDR bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_IO_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_LMB_AWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_DWIDTH bound to: 32 - type: integer 
+	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_USE_IO_BUS bound to: 1 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_RX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_TX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_USE_FIT1 bound to: 0 - type: integer 
+	Parameter C_FIT1_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT2 bound to: 0 - type: integer 
+	Parameter C_FIT2_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT3 bound to: 0 - type: integer 
+	Parameter C_FIT3_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT4 bound to: 0 - type: integer 
+	Parameter C_FIT4_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT1 bound to: 0 - type: integer 
+	Parameter C_PIT1_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT1_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT1_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT2 bound to: 0 - type: integer 
+	Parameter C_PIT2_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT2_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT2_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT3 bound to: 0 - type: integer 
+	Parameter C_PIT3_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT3_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT3_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT4 bound to: 0 - type: integer 
+	Parameter C_PIT4_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT4_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT4_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPO1 bound to: 0 - type: integer 
+	Parameter C_GPO1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO1_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO2 bound to: 0 - type: integer 
+	Parameter C_GPO2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO2_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO3 bound to: 0 - type: integer 
+	Parameter C_GPO3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO3_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPO4 bound to: 0 - type: integer 
+	Parameter C_GPO4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO4_INIT bound to: 32'b00000000000000000000000000000000 
+	Parameter C_USE_GPI1 bound to: 0 - type: integer 
+	Parameter C_GPI1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI2 bound to: 0 - type: integer 
+	Parameter C_GPI2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI3 bound to: 0 - type: integer 
+	Parameter C_GPI3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI4 bound to: 0 - type: integer 
+	Parameter C_GPI4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_INTC_USE_EXT_INTR bound to: 0 - type: integer 
+	Parameter C_INTC_INTR_SIZE bound to: 1 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 16'b0000000000000000 
+	Parameter C_INTC_POSITIVE bound to: 16'b1111111111111111 
+	Parameter C_INTC_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_INTC_ASYNC_INTR bound to: 16'b1111111111111111 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'iomodule' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9912' bound to instance 'U0' of component 'iomodule' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/synth/bd_3914_iomodule_0_0.vhd:294]
+INFO: [Synth 8-638] synthesizing module 'iomodule' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10121]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000010000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9745' bound to instance 'pselect_mask_reg' of component 'pselect_mask' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10469]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_7_pselect_mask' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9760]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_7_pselect_mask' (10#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9760]
+	Parameter C_AW bound to: 32 - type: integer 
+	Parameter C_BAR bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+	Parameter C_MASK bound to: 64'b0000000000000000000000000000000011000000000000000000000000000000 
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9745' bound to instance 'pselect_mask_io' of component 'pselect_mask' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10514]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_7_pselect_mask__parameterized0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9760]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_7_pselect_mask__parameterized0' (10#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9760]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_RX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_TX_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_ERROR_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_USE_FIT1 bound to: 0 - type: integer 
+	Parameter C_FIT1_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT2 bound to: 0 - type: integer 
+	Parameter C_FIT2_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT3 bound to: 0 - type: integer 
+	Parameter C_FIT3_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_FIT4 bound to: 0 - type: integer 
+	Parameter C_FIT4_No_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_FIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT1 bound to: 0 - type: integer 
+	Parameter C_PIT1_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT1_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT1_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT2 bound to: 0 - type: integer 
+	Parameter C_PIT2_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT2_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT2_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT3 bound to: 0 - type: integer 
+	Parameter C_PIT3_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT3_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT3_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_PIT4 bound to: 0 - type: integer 
+	Parameter C_PIT4_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT4_READABLE bound to: 1 - type: integer 
+	Parameter C_PIT4_PRESCALER bound to: 0 - type: integer 
+	Parameter C_PIT4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPO1 bound to: 0 - type: integer 
+	Parameter C_GPO1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO1_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO2 bound to: 0 - type: integer 
+	Parameter C_GPO2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO2_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO3 bound to: 0 - type: integer 
+	Parameter C_GPO3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO3_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPO4 bound to: 0 - type: integer 
+	Parameter C_GPO4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO4_INIT bound to: 0 - type: integer 
+	Parameter C_USE_GPI1 bound to: 0 - type: integer 
+	Parameter C_GPI1_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI1_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI2 bound to: 0 - type: integer 
+	Parameter C_GPI2_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI2_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI3 bound to: 0 - type: integer 
+	Parameter C_GPI3_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI3_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_GPI4 bound to: 0 - type: integer 
+	Parameter C_GPI4_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI4_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_USE_EXT_INTR bound to: 0 - type: integer 
+	Parameter C_INTC_INTR_SIZE bound to: 1 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 16'b0000000000000000 
+	Parameter C_INTC_POSITIVE bound to: 16'b1111111111111111 
+	Parameter C_INTC_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_INTC_ASYNC_INTR bound to: 16'b1111111111111111 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'Iomodule_core' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8539' bound to instance 'IOModule_Core_I1' of component 'iomodule_core' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10694]
+INFO: [Synth 8-638] synthesizing module 'Iomodule_core' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8753]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_UART_FREQ bound to: 100000000 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 199 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_ASYNC bound to: 0 - type: integer 
+	Parameter C_UART_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'UART' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7692' bound to instance 'UART_I1' of component 'UART' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9072]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_7_UART' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7743]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 136 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_UART_PROG_BAUDRATE bound to: 0 - type: integer 
+	Parameter C_UART_BAUDRATE bound to: 9600 - type: integer 
+	Parameter C_USE_UART_RX bound to: 0 - type: integer 
+	Parameter C_USE_UART_TX bound to: 0 - type: integer 
+	Parameter C_UART_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_UART_USE_PARITY bound to: 0 - type: integer 
+	Parameter C_UART_ODD_PARITY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'UART_Core' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7145' bound to instance 'UART_Core_I' of component 'UART_Core' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7862]
+INFO: [Synth 8-638] synthesizing module 'UART_Core' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7189]
+INFO: [Synth 8-256] done synthesizing module 'UART_Core' (11#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7189]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_7_UART' (12#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:7743]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2505' bound to instance 'FIT_I1' of component 'FIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9125]
+INFO: [Synth 8-638] synthesizing module 'FIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2533]
+INFO: [Synth 8-256] done synthesizing module 'FIT_Module' (13#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2533]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2505' bound to instance 'FIT_I2' of component 'FIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9148]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2505' bound to instance 'FIT_I3' of component 'FIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9171]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 34 - type: integer 
+	Parameter C_USE_SRL16 bound to: yes - type: string 
+	Parameter C_USE_FIT bound to: 0 - type: integer 
+	Parameter C_NO_CLOCKS bound to: 6216 - type: integer 
+	Parameter C_INACCURACY bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'FIT_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:2505' bound to instance 'FIT_I4' of component 'FIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9194]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4280' bound to instance 'PIT_I1' of component 'PIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9232]
+INFO: [Synth 8-638] synthesizing module 'PIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4311]
+INFO: [Synth 8-256] done synthesizing module 'PIT_Module' (14#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4311]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4280' bound to instance 'PIT_I2' of component 'PIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9271]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4280' bound to instance 'PIT_I3' of component 'PIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9310]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 70 - type: integer 
+	Parameter C_USE_PIT bound to: 0 - type: integer 
+	Parameter C_PIT_SIZE bound to: 32 - type: integer 
+	Parameter C_PIT_READABLE bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'PIT_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4280' bound to instance 'PIT_I4' of component 'PIT_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9349]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3194' bound to instance 'GPO_I1' of component 'GPO_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9377]
+INFO: [Synth 8-638] synthesizing module 'GPO_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3218]
+INFO: [Synth 8-256] done synthesizing module 'GPO_Module' (15#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3218]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3194' bound to instance 'GPO_I2' of component 'GPO_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9396]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3194' bound to instance 'GPO_I3' of component 'GPO_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9415]
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 32 - type: integer 
+	Parameter C_USE_GPO bound to: 0 - type: integer 
+	Parameter C_GPO_SIZE bound to: 32 - type: integer 
+	Parameter C_GPO_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPO_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3194' bound to instance 'GPO_I4' of component 'GPO_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9434]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3022' bound to instance 'GPI_I1' of component 'GPI_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9456]
+INFO: [Synth 8-638] synthesizing module 'GPI_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3038]
+INFO: [Synth 8-256] done synthesizing module 'GPI_Module' (16#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3038]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3022' bound to instance 'GPI_I2' of component 'GPI_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9472]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3022' bound to instance 'GPI_I3' of component 'GPI_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9488]
+	Parameter C_USE_GPI bound to: 0 - type: integer 
+	Parameter C_GPI_SIZE bound to: 32 - type: integer 
+	Parameter C_GPI_INTERRUPT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'GPI_Module' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3022' bound to instance 'GPI_I4' of component 'GPI_Module' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9504]
+	Parameter C_TARGET bound to: 1'b0 
+	Parameter C_TMR bound to: 0 - type: integer 
+	Parameter C_USE_TMR_DISABLE bound to: 0 - type: integer 
+	Parameter C_VOTE_SIZE bound to: 170 - type: integer 
+	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_INTC_ENABLED bound to: 0 - type: integer 
+	Parameter C_INTC_LEVEL_EDGE bound to: 32'b00000000000000001111111111111111 
+	Parameter C_INTC_POSITIVE bound to: 32'b11111111111111111111111111111111 
+	Parameter C_INTC_ASYNC_INTR bound to: 32'b11111111111111110000000000000000 
+	Parameter C_INTC_HAS_FAST bound to: 1 - type: integer 
+	Parameter C_INTC_ADDR_WIDTH bound to: 17 - type: integer 
+	Parameter C_INTC_NUM_SYNC_FF bound to: 2 - type: integer 
+	Parameter C_INTC_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_USE_LUTRAM bound to: yes - type: string 
+INFO: [Synth 8-3491] module 'intr_ctrl' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3374' bound to instance 'intr_ctrl_I1' of component 'intr_ctrl' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:9546]
+INFO: [Synth 8-638] synthesizing module 'intr_ctrl' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3420]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+INFO: [Synth 8-638] synthesizing module 'iomodule_v3_1_7_MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1034]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'Native' to cell 'FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1063]
+INFO: [Synth 8-256] done synthesizing module 'iomodule_v3_1_7_MB_FDR' (17#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1034]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+	Parameter C_TARGET bound to: 1'b0 
+INFO: [Synth 8-3491] module 'MB_FDR' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:1018' bound to instance 'fdr_i' of component 'MB_FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:4176]
+INFO: [Synth 8-256] done synthesizing module 'intr_ctrl' (18#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:3420]
+INFO: [Synth 8-256] done synthesizing module 'Iomodule_core' (19#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:8753]
+INFO: [Synth 8-256] done synthesizing module 'iomodule' (20#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/hdl/iomodule_v3_1_vh_rfs.vhd:10121]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_iomodule_0_0' (21#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/synth/bd_3914_iomodule_0_0.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_lmb_bram_I_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_6/synth/bd_3914_lmb_bram_I_0.vhd:80]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 1 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 1 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 2 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 8 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 0 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: no_coe_file_loaded - type: string 
+	Parameter C_INIT_FILE bound to: bd_3914_lmb_bram_I_0.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 1 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 32768 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 32768 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_RSTB bound to: 1 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 1 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 1 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 4 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 32 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 32768 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 32768 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 32 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 1 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 32 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     20.388 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_5' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_6/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_5' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_6/synth/bd_3914_lmb_bram_I_0.vhd:255]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_lmb_bram_I_0' (32#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_6/synth/bd_3914_lmb_bram_I_0.vhd:80]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'bd_3914_lmb_bram_I_0' is unconnected for instance 'lmb_bram_I' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:231]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'bd_3914_lmb_bram_I_0' is unconnected for instance 'lmb_bram_I' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:231]
+WARNING: [Synth 8-7023] instance 'lmb_bram_I' of module 'bd_3914_lmb_bram_I_0' has 16 connections declared, but only 14 given [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:231]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_microblaze_I_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_0/synth/bd_3914_microblaze_I_0.vhd:88]
+	Parameter C_SCO bound to: 0 - type: integer 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
+	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK bound to: 2 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK_IRQ bound to: 1 - type: integer 
+	Parameter C_NUM_SYNC_FF_CLK_DEBUG bound to: 2 - type: integer 
+	Parameter C_NUM_SYNC_FF_DBG_CLK bound to: 1 - type: integer 
+	Parameter C_NUM_SYNC_FF_DBG_TRACE_CLK bound to: 2 - type: integer 
+	Parameter C_FAULT_TOLERANT bound to: 0 - type: integer 
+	Parameter C_ECC_USE_CE_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_LOCKSTEP_SLAVE bound to: 0 - type: integer 
+	Parameter C_LOCKSTEP_MASTER bound to: 0 - type: integer 
+	Parameter C_ENDIANNESS bound to: 1 - type: integer 
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_LMB_DATA_SIZE bound to: 32 - type: integer 
+	Parameter C_INSTR_SIZE bound to: 32 - type: integer 
+	Parameter C_IADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_PIADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_DADDR_SIZE bound to: 32 - type: integer 
+	Parameter C_INSTANCE bound to: bd_3914_microblaze_I_0 - type: string 
+	Parameter C_AVOID_PRIMITIVES bound to: 0 - type: integer 
+	Parameter C_AREA_OPTIMIZED bound to: 1 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 0 - type: integer 
+	Parameter C_INTERCONNECT bound to: 2 - type: integer 
+	Parameter C_BASE_VECTORS bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_M_AXI_DP_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DP_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DP_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DP_EXCLUSIVE_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_D_BUS_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_M_AXI_IP_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IP_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IP_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_I_BUS_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_D_LMB bound to: 1 - type: integer 
+	Parameter C_D_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_D_AXI bound to: 0 - type: integer 
+	Parameter C_I_LMB bound to: 1 - type: integer 
+	Parameter C_I_LMB_PROTOCOL bound to: 0 - type: integer 
+	Parameter C_I_AXI bound to: 0 - type: integer 
+	Parameter G_TEMPLATE_LIST bound to: 0 - type: integer 
+	Parameter C_USE_MSR_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_PCMP_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_BARREL bound to: 0 - type: integer 
+	Parameter C_USE_DIV bound to: 0 - type: integer 
+	Parameter C_USE_HW_MUL bound to: 0 - type: integer 
+	Parameter C_USE_FPU bound to: 0 - type: integer 
+	Parameter C_USE_REORDER_INSTR bound to: 0 - type: integer 
+	Parameter C_UNALIGNED_EXCEPTIONS bound to: 0 - type: integer 
+	Parameter C_ILL_OPCODE_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_DIV_ZERO_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_FPU_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_FSL_LINKS bound to: 0 - type: integer 
+	Parameter C_USE_EXTENDED_FSL_INSTR bound to: 0 - type: integer 
+	Parameter C_FSL_EXCEPTION bound to: 0 - type: integer 
+	Parameter C_USE_STACK_PROTECTION bound to: 0 - type: integer 
+	Parameter C_IMPRECISE_EXCEPTIONS bound to: 0 - type: integer 
+	Parameter C_USE_INTERRUPT bound to: 0 - type: integer 
+	Parameter C_USE_EXT_BRK bound to: 0 - type: integer 
+	Parameter C_USE_EXT_NM_BRK bound to: 0 - type: integer 
+	Parameter C_USE_NON_SECURE bound to: 0 - type: integer 
+	Parameter C_USE_MMU bound to: 0 - type: integer 
+	Parameter C_MMU_DTLB_SIZE bound to: 4 - type: integer 
+	Parameter C_MMU_ITLB_SIZE bound to: 2 - type: integer 
+	Parameter C_MMU_TLB_ACCESS bound to: 3 - type: integer 
+	Parameter C_MMU_ZONES bound to: 16 - type: integer 
+	Parameter C_MMU_PRIVILEGED_INSTR bound to: 0 - type: integer 
+	Parameter C_USE_BRANCH_TARGET_CACHE bound to: 0 - type: integer 
+	Parameter C_BRANCH_TARGET_CACHE_SIZE bound to: 0 - type: integer 
+	Parameter C_PC_WIDTH bound to: 17 - type: integer 
+	Parameter C_PVR bound to: 0 - type: integer 
+	Parameter C_PVR_USER1 bound to: 8'b00000000 
+	Parameter C_PVR_USER2 bound to: 32'b00000000000000000000000000000000 
+	Parameter C_DYNAMIC_BUS_SIZING bound to: 0 - type: integer 
+	Parameter C_RESET_MSR bound to: 32'b00000000000000000000000000000000 
+	Parameter C_OPCODE_0x0_ILLEGAL bound to: 0 - type: integer 
+	Parameter C_DEBUG_ENABLED bound to: 0 - type: integer 
+	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_PC_BRK bound to: 1 - type: integer 
+	Parameter C_NUMBER_OF_RD_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_WR_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_DEBUG_EVENT_COUNTERS bound to: 5 - type: integer 
+	Parameter C_DEBUG_LATENCY_COUNTERS bound to: 1 - type: integer 
+	Parameter C_DEBUG_COUNTER_WIDTH bound to: 32 - type: integer 
+	Parameter C_DEBUG_TRACE_SIZE bound to: 8192 - type: integer 
+	Parameter C_DEBUG_EXTERNAL_TRACE bound to: 0 - type: integer 
+	Parameter C_DEBUG_TRACE_ASYNC_RESET bound to: 0 - type: integer 
+	Parameter C_DEBUG_PROFILE_SIZE bound to: 0 - type: integer 
+	Parameter C_INTERRUPT_IS_EDGE bound to: 0 - type: integer 
+	Parameter C_EDGE_IS_POSITIVE bound to: 1 - type: integer 
+	Parameter C_ASYNC_INTERRUPT bound to: 1 - type: integer 
+	Parameter C_ASYNC_WAKEUP bound to: 3 - type: integer 
+	Parameter C_M0_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S0_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M1_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S1_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M2_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S2_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M3_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S3_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M4_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S4_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M5_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S5_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M6_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S6_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M7_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S7_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M8_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S8_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M9_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S9_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M10_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S10_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M11_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S11_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M12_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S12_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M13_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S13_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M14_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S14_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M15_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S15_AXIS_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_ICACHE_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_ICACHE_HIGHADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
+	Parameter C_USE_ICACHE bound to: 0 - type: integer 
+	Parameter C_ALLOW_ICACHE_WR bound to: 1 - type: integer 
+	Parameter C_ADDR_TAG_BITS bound to: 0 - type: integer 
+	Parameter C_CACHE_BYTE_SIZE bound to: 8192 - type: integer 
+	Parameter C_ICACHE_LINE_LEN bound to: 4 - type: integer 
+	Parameter C_ICACHE_ALWAYS_USED bound to: 1 - type: integer 
+	Parameter C_ICACHE_STREAMS bound to: 0 - type: integer 
+	Parameter C_ICACHE_VICTIMS bound to: 0 - type: integer 
+	Parameter C_ICACHE_FORCE_TAG_LUTRAM bound to: 0 - type: integer 
+	Parameter C_ICACHE_DATA_WIDTH bound to: 0 - type: integer 
+	Parameter C_M_AXI_IC_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_IC_USER_VALUE bound to: 31 - type: integer 
+	Parameter C_M_AXI_IC_AWUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_IC_ARUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_IC_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_IC_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_DCACHE_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
+	Parameter C_DCACHE_HIGHADDR bound to: 64'b0000000000000000000000000000000000111111111111111111111111111111 
+	Parameter C_USE_DCACHE bound to: 0 - type: integer 
+	Parameter C_ALLOW_DCACHE_WR bound to: 1 - type: integer 
+	Parameter C_DCACHE_ADDR_TAG bound to: 0 - type: integer 
+	Parameter C_DCACHE_BYTE_SIZE bound to: 8192 - type: integer 
+	Parameter C_DCACHE_LINE_LEN bound to: 4 - type: integer 
+	Parameter C_DCACHE_ALWAYS_USED bound to: 1 - type: integer 
+	Parameter C_DCACHE_USE_WRITEBACK bound to: 0 - type: integer 
+	Parameter C_DCACHE_VICTIMS bound to: 0 - type: integer 
+	Parameter C_DCACHE_FORCE_TAG_LUTRAM bound to: 0 - type: integer 
+	Parameter C_DCACHE_DATA_WIDTH bound to: 0 - type: integer 
+	Parameter C_M_AXI_DC_THREAD_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DC_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_DC_EXCLUSIVE_ACCESS bound to: 0 - type: integer 
+	Parameter C_M_AXI_DC_USER_VALUE bound to: 31 - type: integer 
+	Parameter C_M_AXI_DC_AWUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_DC_ARUSER_WIDTH bound to: 5 - type: integer 
+	Parameter C_M_AXI_DC_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXI_DC_BUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'MicroBlaze' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_0/hdl/microblaze_v11_0_vh_rfs.vhd:164687' bound to instance 'U0' of component 'MicroBlaze' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_0/synth/bd_3914_microblaze_I_0.vhd:760]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_microblaze_I_0' (80#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_0/synth/bd_3914_microblaze_I_0.vhd:88]
+WARNING: [Synth 8-7071] port 'Interrupt_Ack' of module 'bd_3914_microblaze_I_0' is unconnected for instance 'microblaze_I' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:248]
+WARNING: [Synth 8-7023] instance 'microblaze_I' of module 'bd_3914_microblaze_I_0' has 24 connections declared, but only 23 given [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:248]
+INFO: [Synth 8-638] synthesizing module 'bd_3914_rst_0_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/synth/bd_3914_rst_0_0.vhd:74]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b1 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/synth/bd_3914_rst_0_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/XilinxVitis/Vivado/2021.2/scripts/rt/data/unisim_comp.v:105983' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/XilinxVitis/Vivado/2021.2/scripts/rt/data/unisim_comp.v:105983]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (81#1) [C:/XilinxVitis/Vivado/2021.2/scripts/rt/data/unisim_comp.v:105983]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (82#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (83#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (84#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (85#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (86#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_3914_rst_0_0' (87#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/synth/bd_3914_rst_0_0.vhd:74]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'bd_3914_rst_0_0' is unconnected for instance 'rst_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:272]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_3914_rst_0_0' is unconnected for instance 'rst_0' [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:272]
+WARNING: [Synth 8-7023] instance 'rst_0' of module 'bd_3914_rst_0_0' has 10 connections declared, but only 8 given [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:272]
+INFO: [Synth 8-6155] done synthesizing module 'bd_3914' (88#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/synth/bd_3914.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (89#1) [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/synth/cpu.v:60]
+INFO: [Synth 8-6157] synthesizing module 'chu_mcs_bridge' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/sys/bridge/chu_mcs_bridge.sv:1]
+	Parameter BRG_BASE bound to: -1073741824 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'chu_mcs_bridge' (90#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/sys/bridge/chu_mcs_bridge.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mmio_sys_vanilla' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/sys/subsys/mmio_sys_vanilla.sv:2]
+	Parameter N_SW bound to: 16 - type: integer 
+	Parameter N_LED bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'chu_mmio_controller' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/chu_mmio_controller.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'chu_mmio_controller' (91#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/chu_mmio_controller.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'chu_timer' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_basic/chu_timer.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'chu_timer' (92#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_basic/chu_timer.sv:9]
+INFO: [Synth 8-6157] synthesizing module 'chu_uart' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/chu_uart.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'xil_internal_svlib_uart' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/uart.sv:1]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+	Parameter FIFO_W bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'baud_gen' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/baud_gen.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'baud_gen' (93#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/baud_gen.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/uart_rx.sv:2]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/uart_rx.sv:47]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (94#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/uart_rx.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/uart_tx.sv:2]
+	Parameter DBIT bound to: 8 - type: integer 
+	Parameter SB_TICK bound to: 16 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/uart_tx.sv:52]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (95#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/uart_tx.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'fifo' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/fifo/fifo.sv:2]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fifo_ctrl' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/fifo/fifo_ctrl.sv:2]
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/fifo/fifo_ctrl.sv:49]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_ctrl' (96#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/fifo/fifo_ctrl.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'reg_file' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/fifo/reg_file.sv:2]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'reg_file' (97#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/fifo/reg_file.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'fifo' (98#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_support/fifo/fifo.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'xil_internal_svlib_uart' (99#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/uart.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'chu_uart' (100#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/uart/chu_uart.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'chu_gpo' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_basic/chu_gpo.sv:1]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'chu_gpo' (101#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_basic/chu_gpo.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'chu_gpi' [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_basic/chu_gpi.sv:1]
+	Parameter W bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'chu_gpi' (102#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/mmio/mmio_basic/chu_gpi.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'mmio_sys_vanilla' (103#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/sys/subsys/mmio_sys_vanilla.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'mcs_top_vanilla' (104#1) [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/hdl/sys/top/mcs_top_vanilla.sv:1]
+WARNING: [Synth 8-7129] Port cs in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port write in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[31] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[30] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[29] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[28] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[27] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[26] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[25] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[24] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[23] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[22] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[21] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[20] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[19] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[18] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[17] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[16] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[15] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[14] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[13] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[12] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[11] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[10] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[9] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[8] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[7] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[6] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[5] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[4] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[3] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[2] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[1] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[0] in module chu_gpi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[31] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[30] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[29] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[28] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[27] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[26] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[25] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[24] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[23] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[22] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[21] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[20] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[19] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[18] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[17] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[16] in module chu_gpo is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[31] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[30] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[29] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[28] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[27] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[26] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[25] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[24] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[23] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[22] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[21] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[20] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[19] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[18] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[17] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[16] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[15] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[14] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[13] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[12] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[11] in module chu_uart is either unconnected or has no load
+WARNING: [Synth 8-7129] Port read in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[31] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[30] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[29] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[28] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[27] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[26] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[25] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[24] in module chu_timer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wr_data[23] in module chu_timer is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.239 . Memory (MB): peak = 1936.008 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 468 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_0/bd_3914_microblaze_I_0.xdc] for cell 'cpu_unit/inst/microblaze_I/U0'
+Finished Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_0/bd_3914_microblaze_I_0.xdc] for cell 'cpu_unit/inst/microblaze_I/U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_0/bd_3914_microblaze_I_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mcs_top_vanilla_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mcs_top_vanilla_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/bd_3914_rst_0_0_board.xdc] for cell 'cpu_unit/inst/rst_0/U0'
+Finished Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/bd_3914_rst_0_0_board.xdc] for cell 'cpu_unit/inst/rst_0/U0'
+Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/bd_3914_rst_0_0.xdc] for cell 'cpu_unit/inst/rst_0/U0'
+Finished Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_1/bd_3914_rst_0_0.xdc] for cell 'cpu_unit/inst/rst_0/U0'
+Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_3/bd_3914_dlmb_0.xdc] for cell 'cpu_unit/inst/dlmb/U0'
+Finished Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_3/bd_3914_dlmb_0.xdc] for cell 'cpu_unit/inst/dlmb/U0'
+Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/bd_3914_iomodule_0_0_board.xdc] for cell 'cpu_unit/inst/iomodule_0/U0'
+Finished Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_7/bd_3914_iomodule_0_0_board.xdc] for cell 'cpu_unit/inst/iomodule_0/U0'
+Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/cpu_board.xdc] for cell 'cpu_unit/inst'
+Finished Parsing XDC File [c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/cpu_board.xdc] for cell 'cpu_unit/inst'
+Parsing XDC File [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc]
+WARNING: [Vivado 12-584] No ports matched 'btn[4]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'btn[0]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'btn[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'btn[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'btn[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'rgb_led1[0]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'rgb_led1[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:77]
+WARNING: [Vivado 12-584] No ports matched 'rgb_led1[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:78]
+WARNING: [Vivado 12-584] No ports matched 'rgb_led2[0]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'rgb_led2[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:80]
+WARNING: [Vivado 12-584] No ports matched 'rgb_led2[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:81]
+WARNING: [Vivado 12-584] No ports matched 'sseg[0]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'sseg[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'sseg[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'sseg[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'sseg[4]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'sseg[5]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'sseg[6]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:92]
+WARNING: [Vivado 12-584] No ports matched 'sseg[7]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:94]
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:96]
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:99]
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:100]
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:101]
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:102]
+WARNING: [Vivado 12-584] No ports matched 'an[7]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:103]
+WARNING: [Vivado 12-584] No ports matched 'audio_pdm'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'audio_on'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'ps2c'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:125]
+WARNING: [Vivado 12-584] No ports matched 'ps2d'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:126]
+WARNING: [Vivado 12-584] No ports matched 'tmp_i2c_scl'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:133]
+WARNING: [Vivado 12-584] No ports matched 'tmp_i2c_sda'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'acl_miso'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:144]
+WARNING: [Vivado 12-584] No ports matched 'acl_mosi'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:145]
+WARNING: [Vivado 12-584] No ports matched 'acl_sclk'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:146]
+WARNING: [Vivado 12-584] No ports matched 'acl_ss_n'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:147]
+WARNING: [Vivado 12-584] No ports matched 'hsync'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:156]
+WARNING: [Vivado 12-584] No ports matched 'vsync'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:157]
+WARNING: [Vivado 12-584] No ports matched 'rgb[8]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:158]
+WARNING: [Vivado 12-584] No ports matched 'rgb[9]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:159]
+WARNING: [Vivado 12-584] No ports matched 'rgb[10]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:160]
+WARNING: [Vivado 12-584] No ports matched 'rgb[11]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:161]
+WARNING: [Vivado 12-584] No ports matched 'rgb[4]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:162]
+WARNING: [Vivado 12-584] No ports matched 'rgb[5]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:163]
+WARNING: [Vivado 12-584] No ports matched 'rgb[6]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:164]
+WARNING: [Vivado 12-584] No ports matched 'rgb[7]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:165]
+WARNING: [Vivado 12-584] No ports matched 'rgb[0]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:166]
+WARNING: [Vivado 12-584] No ports matched 'rgb[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:167]
+WARNING: [Vivado 12-584] No ports matched 'rgb[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:168]
+WARNING: [Vivado 12-584] No ports matched 'rgb[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:169]
+WARNING: [Vivado 12-584] No ports matched 'sd_reset'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:174]
+WARNING: [Vivado 12-584] No ports matched 'sd_sclk'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:175]
+WARNING: [Vivado 12-584] No ports matched 'sd_mosi'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:176]
+WARNING: [Vivado 12-584] No ports matched 'sd_miso'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:177]
+WARNING: [Vivado 12-584] No ports matched 'sd_ss_n'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:180]
+WARNING: [Vivado 12-584] No ports matched 'adc_n[0]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:207]
+WARNING: [Vivado 12-584] No ports matched 'adc_p[0]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:208]
+WARNING: [Vivado 12-584] No ports matched 'adc_n[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:209]
+WARNING: [Vivado 12-584] No ports matched 'adc_p[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:210]
+WARNING: [Vivado 12-584] No ports matched 'adc_n[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:211]
+WARNING: [Vivado 12-584] No ports matched 'adc_p[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:212]
+WARNING: [Vivado 12-584] No ports matched 'adc_n[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:213]
+WARNING: [Vivado 12-584] No ports matched 'adc_p[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:214]
+WARNING: [Vivado 12-584] No ports matched 'ja_top[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:223]
+WARNING: [Vivado 12-584] No ports matched 'ja_top[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:224]
+WARNING: [Vivado 12-584] No ports matched 'ja_top[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:225]
+WARNING: [Vivado 12-584] No ports matched 'ja_top[4]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:226]
+WARNING: [Vivado 12-584] No ports matched 'ja_btm[7]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:227]
+WARNING: [Vivado 12-584] No ports matched 'ja_btm[8]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:228]
+WARNING: [Vivado 12-584] No ports matched 'ja_btm[9]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:229]
+WARNING: [Vivado 12-584] No ports matched 'ja_btm[10]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:230]
+WARNING: [Vivado 12-584] No ports matched 'jb_top[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:237]
+WARNING: [Vivado 12-584] No ports matched 'jb_top[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:238]
+WARNING: [Vivado 12-584] No ports matched 'jb_top[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:239]
+WARNING: [Vivado 12-584] No ports matched 'jb_top[4]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:240]
+WARNING: [Vivado 12-584] No ports matched 'jb_btm[7]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:241]
+WARNING: [Vivado 12-584] No ports matched 'jb_btm[8]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:242]
+WARNING: [Vivado 12-584] No ports matched 'jb_btm[9]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:243]
+WARNING: [Vivado 12-584] No ports matched 'jb_btm[10]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:244]
+WARNING: [Vivado 12-584] No ports matched 'jc_top[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:251]
+WARNING: [Vivado 12-584] No ports matched 'jc_top[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:252]
+WARNING: [Vivado 12-584] No ports matched 'jc_top[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:253]
+WARNING: [Vivado 12-584] No ports matched 'jc_top[4]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:254]
+WARNING: [Vivado 12-584] No ports matched 'jc_btm[7]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:255]
+WARNING: [Vivado 12-584] No ports matched 'jc_btm[8]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:256]
+WARNING: [Vivado 12-584] No ports matched 'jc_btm[9]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:257]
+WARNING: [Vivado 12-584] No ports matched 'jc_btm[10]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:258]
+WARNING: [Vivado 12-584] No ports matched 'jd_top[1]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:266]
+WARNING: [Vivado 12-584] No ports matched 'jd_top[2]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:267]
+WARNING: [Vivado 12-584] No ports matched 'jd_top[3]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:268]
+WARNING: [Vivado 12-584] No ports matched 'jd_top[4]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:269]
+WARNING: [Vivado 12-584] No ports matched 'jd_btm[7]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:270]
+WARNING: [Vivado 12-584] No ports matched 'jd_btm[8]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:271]
+WARNING: [Vivado 12-584] No ports matched 'jd_btm[9]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:272]
+WARNING: [Vivado 12-584] No ports matched 'jd_btm[10]'. [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc:273]
+Finished Parsing XDC File [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/mcs_top_vanilla_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/fpga_mcs_sv_src/constraint/Nexys4_DDR_chu.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mcs_top_vanilla_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mcs_top_vanilla_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mcs_top_vanilla_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/mcs_top_vanilla_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1936.008 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 354 instances were transformed.
+  FD => FDRE: 32 instances
+  FDE => FDRE: 47 instances
+  FDR => FDRE: 45 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 5 instances
+  FDS => FDSE: 5 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 81 instances
+  MULT_AND => LUT2: 3 instances
+  MUXCY_L => MUXCY: 71 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 64 instances
+  SRL16 => SRL16E: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1936.008 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/microblaze_I/U0. (constraint file  {C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/dont_touch.xdc}, line 37).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/rst_0/U0. (constraint file  {C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/dont_touch.xdc}, line 42).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/dlmb/U0. (constraint file  {C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/dont_touch.xdc}, line 48).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/iomodule_0/U0. (constraint file  {C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/dont_touch.xdc}, line 53).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/microblaze_I. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/rst_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/ilmb. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/dlmb. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/dlmb_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/ilmb_cntlr. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/lmb_bram_I. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpu_unit/inst/iomodule_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:49 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_rx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg_reg' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 | 00000000000000000000000000000000
+                   start |                               01 | 00000000000000000000000000000001
+                    data |                               10 | 00000000000000000000000000000010
+                    stop |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_rx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 | 00000000000000000000000000000000
+                   start |                               01 | 00000000000000000000000000000001
+                    data |                               10 | 00000000000000000000000000000010
+                    stop |                               11 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I2'
+INFO: [Synth 8-223] decloning instance 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I3'
+INFO: [Synth 8-223] decloning instance 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I1' (FIT_Module) to 'cpu_unit/inst/iomodule_0/U0/IOModule_Core_I1/FIT_I4'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (POR_FF_I) is unused and will be removed from module lmb_v10.
+INFO: [Synth 8-3332] Sequential element (U0/POR_FF_I) is unused and will be removed from module bd_3914_ilmb_0.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[7].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[16].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[17].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[18].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[19].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+WARNING: [Synth 8-3332] Sequential element (IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i/Using_FPGA.Native) is unused and will be removed from module iomodule.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.ALU_unmask_EA_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.ALU_long_Op_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.ALU_long_ALU_Op_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.Reg_Test_Long_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[31].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[30].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[29].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[28].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[27].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[26].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[25].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[24].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[23].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[22].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[21].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[20].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[19].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[18].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[17].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[16].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[15].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[14].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[13].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[12].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[11].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[10].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[9].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[8].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[7].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[6].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[5].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[4].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[3].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[2].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[1].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/Result_Mux_I/Result_Mux_Bits[0].Result_Mux_Bit_I/EX_Result_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[29].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[28].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[27].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[26].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[25].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[24].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[23].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[22].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[21].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[20].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[19].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[18].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[17].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[16].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Data_Flow_I/PC_Module_I/Not_All_Bits.Using_FPGA.PC_GEN[15].PC_Bit_I/PC_EX_DFF/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N) is unused and will be removed from module proc_sys_reset.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:01 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'cpu_unit/inst/microblaze_I/U0/Reset' to pin 'cpu_unit/inst/rst_0/U0/FDRE_inst/Q'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:03 ; elapsed = 00:01:09 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    13|
+|3     |LUT1     |    11|
+|4     |LUT2     |   101|
+|5     |LUT3     |    84|
+|6     |LUT4     |   234|
+|7     |LUT5     |   110|
+|8     |LUT6     |   262|
+|10    |MULT_AND |     2|
+|11    |MUXCY_L  |    68|
+|12    |MUXF7    |    32|
+|13    |RAM32X1D |    64|
+|14    |RAM64M   |    24|
+|15    |RAMB36E1 |    32|
+|16    |SRL16    |     1|
+|17    |SRL16E   |    49|
+|18    |XORCY    |    50|
+|19    |FDCE     |   171|
+|20    |FDE      |    32|
+|21    |FDPE     |     3|
+|22    |FDR      |     5|
+|23    |FDRE     |   298|
+|24    |FDS      |     3|
+|25    |FDSE     |    22|
+|26    |IBUF     |    19|
+|27    |OBUF     |    17|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 1936.008 ; gain = 382.797
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12828 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:01:09 . Memory (MB): peak = 1936.008 ; gain = 382.797
+Synthesis Optimization Complete : Time (s): cpu = 00:01:08 ; elapsed = 00:01:14 . Memory (MB): peak = 1936.008 ; gain = 382.797
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1936.008 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 405 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1936.008 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 229 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 19 instances
+  FDE => FDRE: 32 instances
+  FDR => FDRE: 5 instances
+  FDS => FDSE: 3 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 79 instances
+  MULT_AND => LUT2: 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 64 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 24 instances
+  SRL16 => SRL16E: 1 instance 
+
+Synth Design complete, checksum: bc98bed5
+INFO: [Common 17-83] Releasing license: Synthesis
+269 Infos, 253 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:21 . Memory (MB): peak = 1936.008 ; gain = 382.797
+INFO: [Common 17-1381] The checkpoint 'C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/mcs_top_vanilla.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file mcs_top_vanilla_utilization_synth.rpt -pb mcs_top_vanilla_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 28 14:31:36 2023...

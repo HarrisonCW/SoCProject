@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Sep 28 14:30:03 2023
+# Process ID: 11832
+# Current directory: C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1
+# Command line: vivado.exe -log mcs_top_vanilla.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mcs_top_vanilla.tcl
+# Log file: C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1/mcs_top_vanilla.vds
+# Journal file: C:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.runs/synth_1\vivado.jou
+# Running On: ROG-115-22, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 12, Host memory: 34033 MB
+#-----------------------------------------------------------
+source mcs_top_vanilla.tcl -notrace
