@@ -1,0 +1,16 @@
+// Mem file initialization records.
+//
+// SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+// Vivado v2021.2 (64-bit)
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+// Created on Thursday September 28, 2023 - 02:29:34 pm, from:
+//
+//     Map file     - c:\Users\harrison_williams1\Box\6 - 2023 Fall\System on a Chip\9-28-23\9-28-23.gen\sources_1\ip\cpu\bd_0\bd_3914.bmm
+//     Data file(s) - c:/Users/harrison_williams1/Box/6 - 2023 Fall/System on a Chip/9-28-23/9-28-23.gen/sources_1/ip/cpu/bd_0/ip/ip_0/data/mb_bootloop_le.elf
+//
+// Address space 'cpu_unit_inst_microblaze_I.cpu_unit_inst_lmb_bram_I_ADDR_SPACE', bit lane [31:0].
+//
+// Bus width = 32 bits, number of bus blocks = 1.
+
+@00000000
+    B8000000
