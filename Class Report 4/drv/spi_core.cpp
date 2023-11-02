@@ -1,12 +1,3 @@
-/*****************************************************************//**
- * @file spi_core.cpp
- *
- * @brief implementation of SpiCore class
- *
- * @author p chu
- * @version v1.0: initial release
- ********************************************************************/
-
 #include "spi_core.h"
 
 SpiCore::SpiCore(uint32_t core_base_addr) {
@@ -29,6 +20,15 @@ int SpiCore::ready() {
    return (rdy);
 
 }
+
+/*void SpiCore::set_dvsr(int idvsr) {
+ uint32_t ctrl_word;
+
+ dvsr = idvsr;
+ ctrl_word = cpha << 17 | cpha << 16 | dvsr;
+ io_write(base_addr, CTRL_REG, ctrl_word);
+ }
+ */
 
 void SpiCore::set_freq(int freq) {
    uint32_t ctrl_word;
@@ -66,6 +66,8 @@ void SpiCore::assert_ss(int n) {
 void SpiCore::deassert_ss(int n)  //
       {
    write_ss_n(1, n);
+   //ss = (1 << n);
+   //io_write(base_addr, SS_REG, ss);
 }
 
 /* shift out write data and shift in read data */
@@ -80,4 +82,14 @@ uint8_t SpiCore::transfer(uint8_t wr_data) {
    rd_data = io_read(base_addr, RD_DATA_REG) & RX_DATA_FIELD;
    return ((uint8_t) rd_data);
 }
+
+/*
+ void SpiCore::write_ctrl_reg() {
+ uint32_t ctrl_word;
+
+ //ctrl_word = ss << 24 | cpha << 17 | cpha << 16 | dvsr;
+ ctrl_word = cpha << 17 | cpha << 16 | dvsr;
+ io_write(base_addr, CTRL_REG, ctrl_word);
+ }
+ */
 

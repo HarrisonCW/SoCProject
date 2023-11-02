@@ -1,12 +1,3 @@
-/*****************************************************************//**
- * @file xadc_core.cpp
- *
- * @brief implementation of XadcCore class
- *
- * @author p chu
- * @version v1.0: initial release
- ********************************************************************/
-
 #include "xadc_core.h"
 
 XadcCore::XadcCore(uint32_t core_base_addr) {
