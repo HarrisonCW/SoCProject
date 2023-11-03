@@ -1,3 +1,12 @@
+/*****************************************************************//**
+ * @file sseg_core.cpp
+ *
+ * @brief implementation of SsegCore class
+ *
+ * @author p chu
+ * @version v1.0: initial release
+ ********************************************************************/
+
 #include "sseg_core.h"
 
 SsegCore::SsegCore(uint32_t core_base_addr) {

@@ -1,18 +1,10 @@
-// $DISCLAIMER$
-
-// $Id$
-
 /*****************************************************************//**
  * @file spi_core.h
  *
  * @brief control and transfer data via MMIO spi core
  *
- * Detailed description:
- * -
- *
- * $Author$
- * $Date$
- * $Revision$
+ * @author p chu
+ * @version v1.0: initial release
  *********************************************************************/
 
 #ifndef _SPI_CORE_H_INCLUDED
@@ -32,20 +24,20 @@
 class SpiCore {
 public:
    /**
-    * Register map
+    * register map
     *
     * ctrl register fields:
-    *   bits 15-0: dvsr
-    *   bit  16: cpol
-    *   bit  17: cpha
+    *   bits 15-0: dvsr;
+    *   bit  16: cpol;
+    *   bit  17: cpha;
     *   bits 27-24: ss3, ..., ss0
     *
     */
    enum {
-      RD_DATA_REG = 0, /**< 8-bit read data register */
-      SS_REG = 1,      /**< 1-bit status register */
+      RD_DATA_REG = 0,    /**< 8-bit read data register */
+      SS_REG = 1,         /**< 1-bit status register */
       WRITE_DATA_REG = 2, /**< 8-bit write data register */
-      CTRL_REG = 3    /**< control register (ss/cpha/cpol/dvs) */
+      CTRL_REG = 3        /**< control register (ss/cpha/cpol/dvsr) */
    };
    /**
     * Field masks

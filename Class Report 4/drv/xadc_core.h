@@ -1,19 +1,11 @@
-// $DISCLAIMER$
-
-// $Id$
-
 /*****************************************************************//**
  * @file xadc_core.h
  *
- * @brief Retrive data from MMIO XADC core
+ * @brief retrieve data from MMIO XADC core
  *
- * Detailed description:
- * - An 8-element buffer (ptn_buf[]) stores the 8 7-seg patterns.
- * -
  *
- * $Author$
- * $Date$
- * $Revision$
+ * @author p chu
+ * @version v1.0: initial release
  *********************************************************************/
 
 #ifndef _XADC_CORE_H_INCLUDED
@@ -28,22 +20,22 @@
 class XadcCore {
 public:
    /**
-    * Register map
+    * register map
     */
    enum {
-      ADC_0_REG = 0, /**< 16-bit data from Nexys-4 adc input #0   */
-      TMP_REG   = 4,   /**< FPGA internal temperature */
-      VCC_REG   = 5,   /**< FPGA internal core volatge */
+      ADC_0_REG = 0,  /**< 16-bit data from Nexys 4 adc input #0 */
+      TMP_REG   = 4,  /**< FPGA internal temperature */
+      VCC_REG   = 5,  /**< FPGA internal core voltage */
    };
 
    /**
-    * Constructor.
+    * constructor.
     */
    XadcCore(uint32_t core_base_addr);
    ~XadcCore(); // not used
 
    /**
-    * retrieve raw xadc data.
+    * retrieve raw xadc data
     *
     * @param n adc input source (0 to 5)
     * @return raw 16-bit data

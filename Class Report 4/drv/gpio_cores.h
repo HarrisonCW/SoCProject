@@ -1,19 +1,14 @@
-// $DISCLAIMER$
-
-// $Id$
-
 /*****************************************************************//**
  * @file gpio_cores.h
  *
  * @brief Contain classes of simple i/o related cores
  *
  * Detailed description:
- * -
  *
- * $Author$
- * $Date$
- * $Revision$
+ * @author p chu
+ * @version v1.0: initial release
  ********************************************************************/
+
 #ifndef _GPIO_H_INCLUDED
 #define _GPIO_H_INCLUDED
 
@@ -23,23 +18,24 @@
  * gpi (general-purpose input) core driver
  **********************************************************************/
 /**
- *  gpi (general-purpose input) core driver
+ * gpi (general-purpose input) core driver
+ *  - retrieve data from MMIO gpi core.
  *
  * MMIO subsystem HDL parameter:
  *  - W (not used in driver): # bits of input register
  *   (unused bits return 0's)
  */
 class GpiCore {
+public:
    /**
-    * Register map
+    * register map
     *
     */
    enum {
       DATA_REG = 0 /**< input data register */
    };
-public:
    /**
-    * Constructor.
+    * constructor.
     *
     */
    GpiCore(uint32_t core_base_addr);
@@ -66,27 +62,29 @@ private:
    uint32_t base_addr;
 };
 
+
 /**********************************************************************
  * gpo (general-purpose output) core driver
  **********************************************************************/
 /**
  * gpo (general-purpose output) core driver
+ *  - write data to MMIO gpo core.
  *
  * MMIO subsystem HDL parameter:
  *  - W (not used in driver): # bits of output register
  *   (unused bits have no effect)
  */
 class GpoCore {
+public:
    /**
-    * Register map
+    * register map
     *
     */
    enum {
       DATA_REG = 0 /**< output data register */
    };
-public:
    /**
-    * Constructor.
+    * constructor.
     *
     */
    GpoCore(uint32_t core_base_addr);
@@ -110,23 +108,26 @@ public:
 
 private:
    uint32_t base_addr;
-   uint32_t wr_data;      //  //same as GPO core data reg
+   uint32_t wr_data;      // same as GPO core data reg
 };
+
 
 /**********************************************************************
  * pwm core driver
  **********************************************************************/
 /**
- *   pwm (pulse-coded modulation) core driver
+ * pwm (pulse-coded modulation) core driver
+ *  - set frequency of MMIO pwm core.
+ *  - set duty cycle of individual pwm channel
  *
  * MMIO subsystem HDL parameters:
- *  - R => RESOLUTION_BITS : # bits of resolution
- *  - W: number of PWM channels
+ *  - R (RESOLUTION_BITS) : # bits of pwm resolution
+ *  - W: # PWM channels
  */
 class PwmCore {
+public:
    /**
-    * Register map
-    * @note set the default pwm frequency to 1K Hz
+    * register map
     *
     */
    enum {
@@ -134,16 +135,17 @@ class PwmCore {
       DUTY_REG_BASE = 0x10  /**< channel 0 duty cycle register */
    };
    /**
-    * Symbolic constant
+    * symbolic constant
     *
     */
    enum {
       RESOLUTION_BITS = 10, /**< # resolution bits defined in HDL */
       MAX = 1 << RESOLUTION_BITS /**< # max levels in duty cycle (= 2^ESOLUTION_BITS; 100% duty cycle) */
    };
-public:
    /**
-    * Constructor.
+    * constructor.
+    * @note default pwm frequency is set to 1K Hz
+    * @note all pwm channels have the same frequency
     *
     */
    PwmCore(uint32_t core_base_addr);
@@ -183,29 +185,29 @@ private:
 
 
 /**********************************************************************
- * Debouce core driver
+ * Debounce core driver
  **********************************************************************/
 /**
  * debounce core driver:
- *  - retrieved data from MMIO debounce core.
- *  - play a music note
+ *  - retrieve data from MMIO debounce core.
  *
+ * MMIO subsystem HDL parameters:
  *  - W (not used in driver): # bits of input register
  *   (unused bits return 0's)
  *
  */
 class DebounceCore {
+public:
    /**
-    * Register map
+    * register map
     *
     */
    enum {
       NORMAL_DATA_REG = 0, /**< un-treated input data register */
       DB_DATA_REG = 1      /**< debounced input data register */
    };
-public:
    /**
-    * Constructor.
+    * constructor.
     *
     */
    DebounceCore(uint32_t core_base_addr);
@@ -232,7 +234,7 @@ public:
 
    /**
     * read a 32-bit debounced word
-    * @return 32-bit debouncread data word
+    * @return 32-bit debounced input data word
     */
    uint32_t read_db();
 

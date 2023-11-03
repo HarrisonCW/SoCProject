@@ -1,22 +1,10 @@
-// $DISCLAIMER$
-
-// $Id$
-
 /*****************************************************************//**
  * @file sseg_core.h
  *
  * @brief Write 7-segment LED display.
  *
- * Detailed description:
- * - An 8-element buffer (ptn_buf[]) stores the 8 7-seg patterns.
- * - dp stores the decimal point pattern
- * - the 7-seg pattern and dp combined in write_led()
- * - will work for 4-digit 7-seg display (ignoring upper 4 digits)
- * - if modified for an 8-by-8 LED matrix, dp portion should be removed
- *
- * $Author$
- * $Date$
- * $Revision$
+ * @author p chu
+ * @version v1.0: initial release
  *********************************************************************/
 
 #ifndef _SSEG_CORE_H_INCLUDED
@@ -26,7 +14,12 @@
 
 /**
  * seven-segment LED core driver
- *   - control 8/4-digit seven-segment LED display.
+ *  - control 8/4-digit seven-segment LED display.
+ *  - an 8-element buffer (ptn_buf[]) stores the 8 7-seg patterns.
+ *  - dp stores the decimal point pattern
+ *  - the 7-seg pattern and dp combined in write_led()
+ *  - will work for 4-digit 7-seg display (ignoring upper 4 digits)
+ *  - if modified for an 8-by-8 LED matrix, dp portion should be removed
  */
 class SsegCore {
 public:
@@ -35,11 +28,11 @@ public:
     */
    enum {
       DATA_LOW_REG = 0, /**< 32-bit data for right 4 digits */
-      DATA_HIGH_REG = 1 /**<  32-bit data for left 4 digits */
+      DATA_HIGH_REG = 1 /**< 32-bit data for left 4 digits */
    };
 
    /**
-    * Constructor.
+    * constructor
     *
     * @note blank 7-segment LED and then display "HI."
     */
@@ -68,11 +61,11 @@ public:
    void write_8ptn(uint8_t *ptn_array);
 
    /**
-    * set decimal points.
+    * set decimal points
     * @param pt decimal point patterns
-    * @note  each bit of pt control a decimal point of a 7-seg led.
-    * Decimal point turned on when the bit is 1 (active high).
-    * The LSB controls digit 0 of the display.
+    * @note each bit of pt control a decimal point of a 7-seg led.
+    * @note decimal point turned on when the bit is 1 (active high).
+    * @note LSB controls digit 0 of the display.
     *
     */
    void set_dp(uint8_t pt);
