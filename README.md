@@ -1,2 +1,2 @@
 # SoCProject
-# In my project I will attempt to interface with a compass/ gyroscope module in order to display degrees or the cardinal direction the module is facing
+# In my project I will utilize the accelerometer to track movement from the initial state of the Nexus Board
